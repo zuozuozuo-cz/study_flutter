@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/keepoffset', page: ()=>KeepOffsetDemoPage()),
         GetPage(name: '/constraints', page: () => ConstraintsDemoPage()),
         GetPage(name: '/tablet', page: () => TabletTestPage()),
-        GetPage(name: '/keepalive', page:()=> KeepAliveDemoPage())
+        GetPage(name: '/keepalive', page:()=> KeepAliveDemoPage()),
+        GetPage(name: 'nested', page: ()=>NestedScrollView(headerSliverBuilder: headerSliverBuilder, body: body))
       ],
     );
   }
