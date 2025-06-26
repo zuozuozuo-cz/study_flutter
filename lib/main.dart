@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:study_flutter/page/constraints_demo_page.dart';
 import 'package:study_flutter/page/context_demo_page.dart';
+import 'package:study_flutter/page/custom_scroll_page.dart';
 import 'package:study_flutter/page/home_list_page.dart';
 import 'package:study_flutter/page/keep_alive_demo_page.dart';
 import 'package:study_flutter/page/keep_offset_demo_page.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/constraints', page: () => ConstraintsDemoPage()),
         GetPage(name: '/tablet', page: () => TabletTestPage()),
         GetPage(name: '/keepalive', page:()=> KeepAliveDemoPage()),
-        GetPage(name: 'nested', page: ()=>NestedScrollView(headerSliverBuilder: headerSliverBuilder, body: body))
+        GetPage(name: '/customscroll', page: ()=>CustomScrollPage())
+        // GetPage(name: 'nested', page: ()=>NestedScrollView(headerSliverBuilder: headerSliverBuilder, body: body))
       ],
     );
   }

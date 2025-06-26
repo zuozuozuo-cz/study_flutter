@@ -20,6 +20,7 @@ class _HomeListPageState extends State<HomeListPage> {
     {'title': 'KeepOffsetDemoPage', 'route': '/keepoffset'},
     {'title': 'TabletTestPage', 'route': '/tablet'},
     {'title': 'KeepAliveDemoPage', 'route': '/keepalive'},
+    {'title': 'CustomScrollPage', 'route': '/customscroll'},
   ];
 
   @override
