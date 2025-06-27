@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:study_flutter/widget/AiPPTWidget.dart';
-import 'package:study_flutter/widget/ai_write_widget.dart';
+import 'package:study_flutter/widget/tab2Widget.dart';
+import 'package:study_flutter/widget/tab1_widget.dart';
 
 class CustomScrollPage extends StatefulWidget {
   CustomScrollPage({super.key});
@@ -12,7 +12,7 @@ class CustomScrollPage extends StatefulWidget {
 
 class _CustomScrollPageState extends State<CustomScrollPage>
     with SingleTickerProviderStateMixin {
-  final List<Tab> _tabs = [Tab(text: 'AI_写作'), Tab(text: 'AI_PPT')];
+  final List<Tab> _tabs = [Tab(text: 'Tab1'), Tab(text: 'Tab2')];
 
   late TabController _tabController;
 
@@ -37,7 +37,7 @@ class _CustomScrollPageState extends State<CustomScrollPage>
         width: double.infinity,
         child: Column(
           children: [
-            Container(child: Text('沧海月明珠有泪，蓝天日暖玉生烟')),
+            const Text('沧海月明珠有泪，蓝天日暖玉生烟'),
             TabBar(
               tabs: _tabs,
               labelColor: Colors.amber,
@@ -49,14 +49,12 @@ class _CustomScrollPageState extends State<CustomScrollPage>
               child: TabBarView(controller: _tabController, children: [
                 Container(
                   color: Colors.cyan,
-                  child: Center(
-                    child: AiWriteWidget()
-                  ),
+                  child: const Center(child: Tab1Widget()),
                 ),
                 Container(
                   color: Colors.green,
-                  child: Center(
-                    child: Aipptwidget(),
+                  child: const Center(
+                    child: Tab2Widget(),
                   ),
                 ),
               ]),

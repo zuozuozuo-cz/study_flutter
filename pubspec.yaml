@@ -19,7 +19,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.4.0
+  flutter: ">=3.22.0 <=3.24.3"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -27,26 +28,18 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
-dependencies:
+dependencies:  # 项目正式运行时必须依赖的包
   flutter:
     sdk: flutter
-  get:
-      ^4.6.6
+  json_annotation: ^4.9.0  # 用于模型类的注解，运行时需要
+  get: ^4.6.6              # GetX状态管理和路由，运行时需要
+  dio: 5.3.0
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
+dev_dependencies:  # 只在开发、构建、测试阶段使用的包，打包发布时不会包含
+  build_runner: ^2.4.7       # 代码生成工具，运行 flutter pub run build_runner 使用
+  json_serializable: ^6.8.0  # 代码生成库，配合 build_runner 生成 fromJson/toJson 代码
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

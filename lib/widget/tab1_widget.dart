@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Aipptwidget extends StatefulWidget {
-  const Aipptwidget({super.key});
+class Tab1Widget extends StatefulWidget {
+  const Tab1Widget({super.key});
 
   @override
-  State<Aipptwidget> createState() => _AipptwidgetState();
+  State<Tab1Widget> createState() => _Tab1WidgetState();
 }
 
-class _AipptwidgetState extends State<Aipptwidget> {
+class _Tab1WidgetState extends State<Tab1Widget> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -19,6 +19,35 @@ class _AipptwidgetState extends State<Aipptwidget> {
         SliverPersistentHeader(
           pinned: true, // 是否吸顶
           delegate: MyHeaderDelegate(),
+        ),
+        // SliverList(
+        //   delegate: SliverChildBuilderDelegate(
+        //         (BuildContext context, int index) {
+        //       return ListTile(
+        //         title: Text('Item #$index'),
+        //       );
+        //     },
+        //     childCount: 20,
+        //   ),
+        // ),
+        SliverGrid(
+          delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+              return Card(
+                margin: const EdgeInsets.all(8),
+                child: Center(
+                  child: Text('Item #$index'),
+                ),
+              );
+            },
+            childCount: 20,
+          ),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, // 两列
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8,
+            childAspectRatio: 1.5, // 可根据内容微调
+          ),
         ),
       ],
     );
@@ -87,6 +116,7 @@ class _AipptwidgetState extends State<Aipptwidget> {
       ),
     );
   }
+
 }
 
 class MyHeaderDelegate extends SliverPersistentHeaderDelegate {
@@ -96,7 +126,7 @@ class MyHeaderDelegate extends SliverPersistentHeaderDelegate {
       color: Colors.white,
       alignment: Alignment.centerLeft,
       padding: EdgeInsets.symmetric(horizontal: 16),
-      child: Text('好多PPT', style: TextStyle(fontSize: 16)),
+      child: Text('Tab 1 吸顶title', style: TextStyle(fontSize: 16)),
     );
   }
 
