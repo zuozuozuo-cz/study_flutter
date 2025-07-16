@@ -12,7 +12,7 @@ class SnhMemberListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SNH 48 成员列表'),
+        title: Text('SNH48 成员列表'),
       ),
       body: Obx(() {
         if (memberController.isLoading.value) {
