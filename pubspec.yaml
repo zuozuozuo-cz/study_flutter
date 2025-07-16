@@ -46,7 +46,8 @@ dev_dependencies:  # 只在开发、构建、测试阶段使用的包，打包�
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/image/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
