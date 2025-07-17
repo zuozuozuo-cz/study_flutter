@@ -1,4 +1,4 @@
-class AppRoutes{
+class AppRoutes {
   /// 根
   static const root = '/';
 
@@ -18,5 +18,8 @@ class AppRoutes{
   static const demo = '/demo';
   static const demoSnh = '$demo/snh';
 
-
+  /// 关于原理理解的demo
+  static const understanding = '/understanding';
+  static const element = '$understanding/element';
+  static const frame = '$understanding/frame';
 }
