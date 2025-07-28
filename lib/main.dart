@@ -20,7 +20,7 @@ import 'package:study_flutter/routes/app_routes.dart';
 
 final logger = Logger();
 void main() {
-  MyBinding();
+  // MyBinding();
   runApp(const MyApp());
 }
 
