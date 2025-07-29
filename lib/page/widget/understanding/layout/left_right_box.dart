@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+/// 定义一个类别命名，将TextAlignVertical 命名为VerticalAlign
 typedef VerticalAlign = TextAlignVertical;
 
+/// 继承自多子widget的 MultiChildRenderObjectWidget
 class LeftRightBox extends MultiChildRenderObjectWidget {
   final VerticalAlign verticalAlign;
 
@@ -28,6 +30,9 @@ class LeftRightBox extends MultiChildRenderObjectWidget {
   }
 }
 
+/// 继承 RenderBox 混入 ContainerRenderObjectMixin 处理 多子节点处理能力
+/// RenderBoxContainerDefaultsMixin 在 ContainerRenderObjectMixin 基础上，
+/// 提供了默认的遍历、绘制、命中测试等常用逻辑
 class _RenderLeftRight extends RenderBox
     with
         ContainerRenderObjectMixin<RenderBox, _leftRightParentData>,
@@ -43,12 +48,13 @@ class _RenderLeftRight extends RenderBox
     }
   }
 
+  /// 执行 Layout逻辑
   @override
   void performLayout() {
+    // 获取父节点穿来的约束
     final BoxConstraints constraints = this.constraints;
     RenderBox leftChild = firstChild!;
-    _leftRightParentData childParentData =
-        leftChild.parentData! as _leftRightParentData;
+    _leftRightParentData childParentData = leftChild.parentData! as _leftRightParentData;
     RenderBox? rightChild = childParentData.nextSibling;
     double rightChildWidth = .0;
     double rightChildHeight = .0;
@@ -111,4 +117,6 @@ class _RenderLeftRight extends RenderBox
 
 }
 
+/// 定义 _leftRightParentData 继承自 ContainerBoxParentData
+/// 用于Layout的时候 保存Offset信息
 class _leftRightParentData extends ContainerBoxParentData<RenderBox> {}
