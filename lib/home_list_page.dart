@@ -28,6 +28,8 @@ class _HomeListPageState extends State<HomeListPage> {
     {'title': 'element 生命周期理解', 'route': AppRoutes.element},
     {'title': 'frame 理解', 'route': AppRoutes.frame},
     {'title': 'layout 理解', 'route': AppRoutes.layout},
+    {'title': '绘制 理解', 'route': AppRoutes.painting},
+    {'title': '合成 理解', 'route': AppRoutes.compositing},
   ];
 
   String md =

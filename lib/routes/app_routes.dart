@@ -23,4 +23,6 @@ class AppRoutes {
   static const element = '$understanding/element';
   static const frame = '$understanding/frame';
   static const layout = '$understanding/layout';
+  static const painting = '$understanding/paint';
+  static const compositing = '$understanding/compositing';
 }
