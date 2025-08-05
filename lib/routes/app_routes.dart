@@ -2,17 +2,26 @@ class AppRoutes {
   /// 根
   static const root = '/';
 
-  /// 常规练习页面
+  /// 首页路由
+  static const base = '${root}base';
+  static const base_study = '${base}study';
+  static const source_study = '${base}source';
+  static const scroll_study = '${base}scroll';
+  static const complex_demo = '${base}complex';
+  static const getx_study = '${base}getx';
+
+  /// 基本学习demo
   static const stateless = '/stateless';
   static const contextDemo = '/context';
   static const lifecycle = '/life';
+  static const constraints = '/constraints';
+
+  /// 滑动学习demo
   static const scrollController = '/scrollcontroller';
   static const keepOffset = '/keepoffset';
-  static const constraints = '/constraints';
   static const tablet = '/tablet';
   static const keepAlive = '/keepalive';
   static const customScroll = '/customscroll';
-  static const more = '/more';
 
   /// 综合Demo 页面
   static const demo = '/demo';
