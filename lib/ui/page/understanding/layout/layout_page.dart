@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:study_flutter/main.dart';
-import 'package:study_flutter/page/widget/understanding/layout/accurate_sized_box.dart';
-import 'package:study_flutter/page/widget/understanding/layout/custom_center.dart';
-import 'package:study_flutter/page/widget/understanding/layout/left_right_box.dart';
+
+import '../../../widget/understanding/layout/accurate_sized_box.dart';
 
 class LayoutPage extends StatefulWidget {
   const LayoutPage({super.key});

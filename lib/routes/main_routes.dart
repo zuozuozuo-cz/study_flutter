@@ -1,15 +1,16 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
-import '../page/constraints_demo_page.dart';
-import '../page/context_demo_page.dart';
-import '../page/custom_scroll_page.dart';
+
 import '../home_list_page.dart';
-import '../page/keep_alive_demo_page.dart';
-import '../page/keep_offset_demo_page.dart';
-import '../page/lifecycle_test_page.dart';
-import '../page/scrollcontroller_demo_page.dart';
-import '../page/stateless_page.dart';
-import '../page/tablet_test_page.dart';
+import '../ui/page/constraints_demo_page.dart';
+import '../ui/page/context_demo_page.dart';
+import '../ui/page/custom_scroll_page.dart';
+import '../ui/page/keep_alive_demo_page.dart';
+import '../ui/page/keep_offset_demo_page.dart';
+import '../ui/page/lifecycle_test_page.dart';
+import '../ui/page/scrollcontroller_demo_page.dart';
+import '../ui/page/stateless_page.dart';
+import '../ui/page/tablet_test_page.dart';
 import 'app_routes.dart';
 
 final List<GetPage> mainRoutes = [

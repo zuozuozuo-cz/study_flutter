@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../widget/device_type_widget.dart';
+import '../../widget/device_type_widget.dart';
+
 
 class TabletTestPage extends StatefulWidget {
   const TabletTestPage({super.key});

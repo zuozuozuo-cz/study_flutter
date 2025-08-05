@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../tools/controllers/LogCollector.dart';
-import '../tools/widget/log_console.dart';
 
 class LifecycleTestPage extends StatefulWidget {
   const LifecycleTestPage({super.key});
