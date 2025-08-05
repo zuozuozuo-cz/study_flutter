@@ -1,5 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:study_flutter/routes/app_routes.dart';
+import 'package:study_flutter/ui/page/understanding/pointer_event/pointer_event_page.dart';
 
 import '../ui/page/understanding/compositing/compositing_page.dart';
 import '../ui/page/understanding/lifecycle/element_lifecycle_page.dart';
@@ -13,4 +14,5 @@ final List<GetPage> understandingRoutes = [
   GetPage(name: AppRoutes.layout, page: () => LayoutPage()),
   GetPage(name: AppRoutes.painting, page: () => PaintPage()),
   GetPage(name: AppRoutes.compositing, page: () => CompositingPage()),
+  GetPage(name: AppRoutes.pointer_event, page: () => PointerEventPage()),
 ];

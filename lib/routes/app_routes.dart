@@ -34,4 +34,5 @@ class AppRoutes {
   static const layout = '$understanding/layout';
   static const painting = '$understanding/paint';
   static const compositing = '$understanding/compositing';
+  static const pointer_event = '$understanding/pointer_event';
 }

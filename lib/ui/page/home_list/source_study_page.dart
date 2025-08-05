@@ -17,6 +17,7 @@ class _SourceStudyPageState extends State<SourceStudyPage> {
     {'title': 'layout 理解', 'route': AppRoutes.layout},
     {'title': '绘制 理解', 'route': AppRoutes.painting},
     {'title': '合成 理解', 'route': AppRoutes.compositing},
+    {'title': '事件处理 理解', 'route': AppRoutes.pointer_event},
   ];
 
   @override
