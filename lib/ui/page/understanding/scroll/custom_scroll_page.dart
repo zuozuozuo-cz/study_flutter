@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:study_flutter/widget/tab2Widget.dart';
-import 'package:study_flutter/widget/tab1_widget.dart';
+import 'package:study_flutter/widget/complex/tab1_widget.dart';
+
+import '../../../../widget/complex/tab2Widget.dart';
 
 class CustomScrollPage extends StatefulWidget {
   CustomScrollPage({super.key});
